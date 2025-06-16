@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="@android:color/white"
+    tools:context=".MenuPrincipalActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvBienvenida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido(a)"
+                android:textSize="20sp"
+                android:textColor="#6200EE"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnIniciarSesion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Iniciar Sesión"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/btnRegistrarse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Registrarse"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/btnRecuperarContrasena"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Olvidaste tu contraseña?"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/btnAcercaDe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Acerca de"
+                    android:layout_marginBottom="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lySubmenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnEditar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Editar datos personales"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/btnGestionarIngresos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gestionar ingresos"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/btnGestionarGastos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gestionar gastos"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/btnGestionarFuentes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gestionar fuente de ingresos"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/btnGestionarCategorias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gestionar categorías"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/btnInforme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Generar informe financiero" />
+
+                <Button
+                    android:id="@+id/btnCerrarSesion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cerrar Sesión"
+                    android:visibility="gone"
+                    android:layout_marginTop="16dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:text="Mi Presupuesto"
+            android:textColor="#6200EE"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="¡Bienvenida a ejercer control de tu presupuesto!"
+            android:textSize="16sp"
+            android:textColor="#555"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnIniciarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iniciar sesión"
+            android:backgroundTint="#6200EE"
+            android:textColor="#FFF"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnRegistrarse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrarse"
+            android:backgroundTint="#6200EE"
+            android:textColor="#FFF"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnRecordar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Olvidaste tu contraseña?"
+            android:backgroundTint="#6200EE"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:id="@+id/tvAcercaDe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acerca de"
+            android:textColor="#6200EE"
+            android:layout_marginTop="24dp"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+</ScrollView>

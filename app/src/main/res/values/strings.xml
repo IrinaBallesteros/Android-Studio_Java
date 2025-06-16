@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MiPresupuestoApp</string>
+    <string name="bienvenida_a_ejercer_control_de_tu_presupuesto">¡Bienvenida a ejercer control de tu Presupuesto!</string>
+    <string name="iniciar_sesi_n">Iniciar sesión</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="mi_presupuesto_app">Mi Presupuesto App</string>
+    <string name="pantalla_de_acerca_de">Pantalla de Acerca de</string>
+    <string name="pantalla_de_login">Pantalla de Login</string>
+    <string name="entrar">Entrar</string>
+    <string name="olvidaste_tu_contrase_a">¿Olvidaste tu contraseña?</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="pantalla_de_recuperar_contrasena">Pantalla de Recuperar Contrasena</string>
+    <string name="pantalla_de_registro">Pantalla de Registro</string>
+    <string name="explorar_sin_cuenta">Explorar sin cuenta</string>
+    <string name="mipresupuestoapp">MiPresupuestoApp</string>
+</resources>

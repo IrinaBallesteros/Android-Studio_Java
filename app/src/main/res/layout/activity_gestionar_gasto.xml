@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Agregar Gasto"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Fecha del Gasto -->
+        <EditText
+            android:id="@+id/etFechaGasto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha del Gasto (YYYY-MM-DD)"
+            android:inputType="date" />
+
+        <!-- Nombre del Gasto -->
+        <EditText
+            android:id="@+id/etNombreGasto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del Gasto"
+            android:inputType="textCapWords" />
+
+        <!-- Valor del Gasto -->
+        <EditText
+            android:id="@+id/etValorGasto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor del Gasto"
+            android:inputType="numberDecimal" />
+
+        <!-- Categoría del Gasto -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Categoría del Gasto"
+            android:layout_marginTop="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerCategoriaGasto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Agregar nueva categoría -->
+        <EditText
+            android:id="@+id/etNuevaCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Agregar nueva categoría (opcional)"
+            android:inputType="text" />
+
+        <!-- Descripción del Gasto -->
+        <EditText
+            android:id="@+id/etDescripcionGasto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción del Gasto"
+            android:inputType="textMultiLine" />
+
+        <!-- Botones -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btnGuardarGasto"
+                android:text="Guardar"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnCancelarGasto"
+                android:text="Cancelar"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
