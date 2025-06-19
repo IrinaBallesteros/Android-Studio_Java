@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -38,6 +39,13 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, RecuperarContrasenaActivity.class);
             startActivity(intent);
         });
+
+
+        DBHelper dbHelper = new DBHelper(this);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM usuarios", null);
+        Log.d("DB", "Usuarios encontrados: " + cursor.getCount());
+        cursor.close();
     }
 
     private void iniciarSesion() {
@@ -61,7 +69,6 @@ public class LoginActivity extends AppCompatActivity {
             String nombre = cursor.getString(cursor.getColumnIndexOrThrow("primer_nombre"));
 
             Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
-
 
             SharedPreferences prefs = getSharedPreferences("usuario", MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();

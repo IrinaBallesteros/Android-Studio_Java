@@ -3,6 +3,12 @@
     <string name="bienvenida_a_ejercer_control_de_tu_presupuesto">¡Bienvenida a ejercer control de tu Presupuesto!</string>
     <string name="iniciar_sesi_n">Iniciar sesión</string>
     <string name="registrarse">Registrarse</string>
+    <string-array name="tipo_identificacion_array">
+        <item>CC</item>
+        <item>TI</item>
+        <item>CE</item>
+        <item>Pasaporte</item>
+    </string-array>
     <string name="mi_presupuesto_app">Mi Presupuesto App</string>
     <string name="pantalla_de_acerca_de">Pantalla de Acerca de</string>
     <string name="pantalla_de_login">Pantalla de Login</string>
@@ -13,4 +19,16 @@
     <string name="pantalla_de_registro">Pantalla de Registro</string>
     <string name="explorar_sin_cuenta">Explorar sin cuenta</string>
     <string name="mipresupuestoapp">MiPresupuestoApp</string>
+    <string-array name="rol_array">
+        <item>Usuario</item>
+        <item>Administrador</item>
+    </string-array>
+    <string-array name="genero_array">
+        <item>Seleccione un género</item>
+        <item>Femenino</item>
+        <item>Masculino</item>
+        <item>No binario</item>
+        <item>Otro</item>
+        <item>Prefiero no decirlo</item>
+    </string-array>
 </resources>

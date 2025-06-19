@@ -13,7 +13,8 @@ import java.util.List;
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "MiPresupuesto.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 4;
+
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -24,7 +25,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE usuarios (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "identificacion TEXT UNIQUE NOT NULL," +
-                "tipo_identificacion TEXT NOT NULL," +
+                "tipo_Id TEXT NOT NULL," +
                 "contrasena TEXT NOT NULL," +
                 "pregunta TEXT NOT NULL," +
                 "respuesta TEXT NOT NULL," +
@@ -74,6 +75,10 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS usuarios");
+        db.execSQL("DROP TABLE IF EXISTS ingresos");
+        db.execSQL("DROP TABLE IF EXISTS gastos");
+        db.execSQL("DROP TABLE IF EXISTS fuentes");
+        db.execSQL("DROP TABLE IF EXISTS categorias");
         onCreate(db);
     }
 
@@ -83,13 +88,13 @@ public class DBHelper extends SQLiteOpenHelper {
                                    String primerNombre, String segundoNombre,
                                    String primerApellido, String segundoApellido,
                                    String genero, String email, String telefono,
-                                   String foto, String rol, String pais, String ciudad) {
+                                   String rol, String pais, String ciudad, String foto) {
 
         SQLiteDatabase db = this.getWritableDatabase();
-
         ContentValues values = new ContentValues();
-        values.put("tipo_identificacion", tipoId);
-        values.put("tipo_id", tipoId);
+
+        values.put("identificacion", identificacion);
+        values.put("tipo_Id", tipoId);
         values.put("contrasena", contrasena);
         values.put("pregunta", pregunta);
         values.put("respuesta", respuesta);
@@ -100,19 +105,14 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put("genero", genero);
         values.put("email", email);
         values.put("telefono", telefono);
-        values.put("foto", foto);
         values.put("rol", rol);
         values.put("pais", pais);
         values.put("ciudad", ciudad);
+        values.put("foto", foto);
 
         long resultado = db.insert("usuarios", null, values);
-        if (resultado == -1) {
-            Log.e("DBHelper", "Error al insertar usuario con ID: " + identificacion);
-        }
         return resultado != -1;
     }
-
-
     public Cursor obtenerUsuarioPorId(String identificacion) {
         SQLiteDatabase db = this.getReadableDatabase();
         return db.rawQuery("SELECT * FROM usuarios WHERE identificacion = ?", new String[]{identificacion});
@@ -227,7 +227,7 @@ public class DBHelper extends SQLiteOpenHelper {
         long id = db.insert("gastos", null, values);
 
         if (id != -1) {
-            // Disminuir saldo del usuario
+
             actualizarSaldoUsuario(identificacion, -valor);
         }
 

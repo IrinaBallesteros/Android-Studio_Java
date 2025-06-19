@@ -25,6 +25,15 @@
         <activity android:name=".RegistroActivity" />
         <activity android:name=".RecuperarContrasenaActivity" />
         <activity android:name=".AcercaDeActivity" />
+        <activity android:name=".MenuPrincipalActivity"/>
+        <activity android:name=".GestionarIngresoActivity"/>
+        <activity android:name=".GestionarGastoActivity"/>
+        <activity android:name=".EditarPerfilActivity"/>
+        <activity android:name=".MenuOcultoActivity"/>
+        <activity android:name=".FuentesActivity"/>
+        <activity android:name=".CategoriasActivity"/>
+        <activity android:name=".InformeFinancieroActivity"/>
+
 
     </application>
 
